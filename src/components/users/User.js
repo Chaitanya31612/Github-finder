@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 import React, { Fragment, useEffect, useContext } from 'react';
 import Repos from '../repos/Repos'
 import Spinner from '../layout/Spinner';
@@ -57,7 +58,8 @@ const User = ({ match }) => {
                         <h3>Bio</h3>
                         <p>{bio}</p>
                     </Fragment>}
-                    <a href={html_url} className="btn btn-dark my-1">Visit Github Profile</a>
+                    // eslint-disable-next-line react/jsx-no-target-blank
+                    <a href={html_url} className="btn btn-dark my-1" target="_blank">Visit Github Profile</a>
                     <ul>
                         <li>
                             {login && (
